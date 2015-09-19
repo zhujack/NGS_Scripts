@@ -50,7 +50,7 @@ if [ $RTA_time_past -lt $timeCutoff ]; then
             mail -r noreply@meltzerlab.nih.gov -s "Harvest done: $run" zhujack@mail.nih.gov <<< ""
             ## update solDB_flowCellBasecallLane
             echo "Updated flowCellBasecallLane on $(date +%c)" >> /home/zhujack/log/solDB_flowCellBasecallLane_update.log
-            mysql -h sartre.nci.nih.gov -u zhujack -pmicroarray soldb < /home/zhujack/bin/solDB_flowCellBasecallLane_update.sql >> /home/zhujack/log/solDB_flowCellBasecallLane_update.log  2>&1
+            mysql -h sartre.nci.nih.gov -u zxxxx -pxxxx soldb < /home/zhujack/bin/solDB_flowCellBasecallLane_update.sql >> /home/zhujack/log/solDB_flowCellBasecallLane_update.log  2>&1
             
             cd /home/zhujack/temp
             ## cron problem
